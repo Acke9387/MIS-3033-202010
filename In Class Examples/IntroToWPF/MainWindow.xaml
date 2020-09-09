@@ -1,0 +1,18 @@
+﻿<Window x:Class="IntroToWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IntroToWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" >
+    <Grid>
+        <Label Content="Welcome to MIS 3033!" HorizontalAlignment="Left" Margin="120,43,0,0" VerticalAlignment="Top" Height="74" Width="498" Foreground="#FF1A54BB" FontSize="48"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Height="25" Margin="146,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79"/>
+        <Label Content="Enter Name:" HorizontalAlignment="Left" Margin="66,150,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAge" HorizontalAlignment="Left" Height="25" Margin="146,218,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="79" Text="Textbox"/>
+        <Label Content="Enter Age:" HorizontalAlignment="Left" Margin="77,213,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnGo" Content="Go!" HorizontalAlignment="Left" Margin="186,306,0,0" VerticalAlignment="Top" Height="98" Width="266" FontSize="24" MouseEnter="btnGo_MouseEnter" Click="btnGo_Click"/>
+
+    </Grid>
+</Window>
