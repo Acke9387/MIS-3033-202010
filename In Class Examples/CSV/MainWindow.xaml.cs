@@ -85,5 +85,7 @@ namespace CSV
             }
             MessageBox.Show($"The total sum of Price is {sum.ToString("C2")}!");
         }
+
+
     }
 }
