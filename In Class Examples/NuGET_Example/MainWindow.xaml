@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Image HorizontalAlignment="Left" Height="337" Margin="167,72,0,0" VerticalAlignment="Top" Width="254"/>
+        <ListBox x:Name="lstItems" HorizontalAlignment="Left" Height="100" Margin="573,184,0,0" VerticalAlignment="Top" Width="100" MouseDoubleClick="ListBox_MouseDoubleClick"/>
 
     </Grid>
 </Window>

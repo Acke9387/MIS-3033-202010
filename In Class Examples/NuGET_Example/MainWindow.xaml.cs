@@ -24,5 +24,9 @@ namespace NuGET_Example
         {
             InitializeComponent();
         }
+
+        private void ListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+        }
     }
 }
