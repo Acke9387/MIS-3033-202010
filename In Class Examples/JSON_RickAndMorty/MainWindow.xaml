@@ -11,7 +11,7 @@
         <Label Content="Rick &amp; Morty" HorizontalAlignment="Left" Margin="251,10,0,0" VerticalAlignment="Top" FontSize="48"/>
         <Label Content="Select a character" HorizontalAlignment="Left" Margin="18,107,0,0" VerticalAlignment="Top"/>
         <Image x:Name="imgCharacter" Margin="528,89,10,10"/>
-        <Label x:Name="lblName" Content="Label" HorizontalAlignment="Left" Margin="106,208,0,0" VerticalAlignment="Top" Height="114" Width="358" FontSize="18" Background="#FFE61414" Foreground="#FFF9EAEA" FontWeight="Bold"/>
+        <Label x:Name="lblName" Content="" HorizontalAlignment="Left" Margin="106,208,0,0" VerticalAlignment="Top" Height="114" Width="358" FontSize="18" Background="#FFE61414" Foreground="#FFF9EAEA" FontWeight="Bold"/>
 
     </Grid>
 </Window>
