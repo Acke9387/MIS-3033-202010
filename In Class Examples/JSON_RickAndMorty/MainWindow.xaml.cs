@@ -30,6 +30,7 @@ namespace JSON_RickAndMorty
 
             //HttpClient client = new HttpClient();
             Characters characters;
+
             using (var client = new HttpClient())
             {
                 var results = client.GetStringAsync(webService).Result;
