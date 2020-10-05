@@ -24,6 +24,10 @@ namespace Pokemon
     /// </summary>
     public partial class MainWindow : Window
     {
+        public PokemonInfo poke;
+
+        private bool showFront = true;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -37,15 +41,53 @@ namespace Pokemon
                 string jsonResults = client.GetStringAsync(apiURL).Result;
 
                 pokemonApiResults = JsonConvert.DeserializeObject<PokemonAPI>(jsonResults);
+
             }
 
             // do more stuff
             // e.g. add results to a listbox/combobox
-            foreach (var item in pokemonApiResults.Results)
+            foreach (var item in pokemonApiResults.results)
             {
                 cboPokemon.Items.Add(item);
             }
 
+        }
+
+        private void cboPokemon_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedPokemon = (AllResults)cboPokemon.SelectedItem;
+
+            using (var client = new HttpClient())
+            {
+                string jsonResults = client.GetStringAsync(selectedPokemon.url).Result;
+
+                poke = JsonConvert.DeserializeObject<PokemonInfo>(jsonResults);
+            }
+
+            
+
+            SetImageByURL(poke.sprites.front_default);
+            showFront = false;
+            btnFlip.IsEnabled = true;
+        }
+
+        private void SetImageByURL(string urlToImage)
+        {
+            imgPokemon.Source = new BitmapImage (new Uri(urlToImage));
+        }
+
+        private void btnFlip_Click(object sender, RoutedEventArgs e)
+        {
+            if (showFront)
+            {
+                SetImageByURL(poke.sprites.front_default);
+
+            }
+            else
+            {
+                SetImageByURL(poke.sprites.back_default);
+            }
+            showFront = !showFront;
         }
     }
 }
