@@ -40,6 +40,7 @@ namespace Pokemon
             {
                 string jsonResults = client.GetStringAsync(apiURL).Result;
 
+
                 pokemonApiResults = JsonConvert.DeserializeObject<PokemonAPI>(jsonResults);
 
             }
@@ -57,23 +58,31 @@ namespace Pokemon
         {
             var selectedPokemon = (AllResults)cboPokemon.SelectedItem;
 
-            using (var client = new HttpClient())
-            {
-                string jsonResults = client.GetStringAsync(selectedPokemon.url).Result;
+            PokemonInfoWindow infoWindow = new PokemonInfoWindow();
 
-                poke = JsonConvert.DeserializeObject<PokemonInfo>(jsonResults);
-            }
+            infoWindow.sp = selectedPokemon;
+            //infoWindow.Setup(selectedPokemon);
+            infoWindow.Setup();
+            //infoWindow.Show();
+            infoWindow.ShowDialog();
 
-            
+            //using (var client = new HttpClient())
+            //{
+            //    string jsonResults = client.GetStringAsync(selectedPokemon.url).Result;
 
-            SetImageByURL(poke.sprites.front_default);
-            showFront = false;
-            btnFlip.IsEnabled = true;
+            //    poke = JsonConvert.DeserializeObject<PokemonInfo>(jsonResults);
+            //}
+
+
+
+            //SetImageByURL(poke.sprites.front_default);
+            //showFront = false;
+            //btnFlip.IsEnabled = true;
         }
 
         private void SetImageByURL(string urlToImage)
         {
-            imgPokemon.Source = new BitmapImage (new Uri(urlToImage));
+            //imgPokemon.Source = new BitmapImage (new Uri(urlToImage));
         }
 
         private void btnFlip_Click(object sender, RoutedEventArgs e)

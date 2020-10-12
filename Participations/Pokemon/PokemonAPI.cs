@@ -32,6 +32,13 @@ namespace Pokemon
 
         public Sprite sprites { get; set; }
 
+        public PokemonInfo()
+        {
+            height = 0;
+            weight = 0;
+            sprites = new Sprite();
+        }
+
     }
 
     public class Sprite
