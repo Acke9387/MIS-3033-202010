@@ -21,7 +21,8 @@ namespace Pokemon
     /// </summary>
     public partial class PokemonInfoWindow : Window
     {
-        //public PokemonInfo poke;
+        public PokemonInfo poke;
+        private bool showFront = false;
         public AllResults sp { get; set; }
 
         public PokemonInfoWindow()
@@ -31,7 +32,6 @@ namespace Pokemon
 
         public void Setup()//(AllResults selectedPokemon)
         {
-            PokemonInfo poke;
             var selectedPokemon = sp;
             using (var client = new HttpClient())
             {
@@ -41,14 +41,30 @@ namespace Pokemon
             }
 
 
-
+            showFront = false;
+            btnFlip.IsEnabled = true;
             SetImageByURL(poke.sprites.front_default);
-            lblPokemonName.Content = selectedPokemon.name;
+            lblPokemonName.Content = selectedPokemon.name.ToUpper() ;
+            this.Title = $"{selectedPokemon.name} Info";
         }
 
         private void SetImageByURL(string urlToImage)
         {
             imgPokemon.Source = new BitmapImage(new Uri(urlToImage));
+        }
+
+        private void btnFlip_Click(object sender, RoutedEventArgs e)
+        {
+            if (showFront)
+            {
+                SetImageByURL(poke.sprites.front_default);
+
+            }
+            else
+            {
+                SetImageByURL(poke.sprites.back_default);
+            }
+            showFront = !showFront;
         }
     }
 }
