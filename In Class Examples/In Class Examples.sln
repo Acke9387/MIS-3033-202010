@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_RickAndMorty", "JSON_R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JSON_GOT", "JSON_GOT\JSON_GOT.csproj", "{0940E8ED-9E25-4DA1-8B4B-A9E988959923}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFirstMVCApplication", "MyFirstMVCApplication\MyFirstMVCApplication.csproj", "{7F1EA54A-91A5-4617-94C1-530C6DB94182}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{0940E8ED-9E25-4DA1-8B4B-A9E988959923}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0940E8ED-9E25-4DA1-8B4B-A9E988959923}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0940E8ED-9E25-4DA1-8B4B-A9E988959923}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F1EA54A-91A5-4617-94C1-530C6DB94182}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F1EA54A-91A5-4617-94C1-530C6DB94182}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F1EA54A-91A5-4617-94C1-530C6DB94182}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F1EA54A-91A5-4617-94C1-530C6DB94182}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
