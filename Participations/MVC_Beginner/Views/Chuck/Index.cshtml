@@ -1,0 +1,36 @@
+﻿@model MVC_Beginner.Models.ChuckAPI
+
+@{
+    ViewBag.Title = "Chuck Norris Jokes";
+}
+
+
+<div class="jumbotron">
+    <h1>Chuck Norris Jokes</h1>
+    <p>@Model.value</p>
+    <img src="@Model.icon_url" />
+    <a href="/Chuck/5">Go Here</a>
+</div>
+
+@*<div>
+        <h4>ChuckAPI</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.icon_url)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.icon_url)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.value)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.value)
+            </dd>
+
+        </dl>
+    </div>*@
